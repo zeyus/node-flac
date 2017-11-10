@@ -303,7 +303,7 @@ namespace nodeflac {
 		size_t smallestLen = ~0;
 		for (unsigned int i = 0; i < self->numChannels; i++) {
 			pointers[i] = (FLAC__int32*) Buffer::Data(array->Get(i));
-			smallestLen = std::min(smallestLen, Buffer::Length(array->Get(i)));
+			smallestLen = (std::min)(smallestLen, Buffer::Length(array->Get(i)));
 		}
 		
 		/* submit buffers for processing */
@@ -338,7 +338,7 @@ namespace nodeflac {
 		size_t smallestLen = ~0;
 		for (unsigned int i = 0; i < self->numChannels; i++) {
 			pointers[i] = (FLAC__int32*) Buffer::Data(array->Get(i));
-			smallestLen = std::min(smallestLen, Buffer::Length(array->Get(i)));
+			smallestLen = (std::min)(smallestLen, Buffer::Length(array->Get(i)));
 		}
 
 		smallestLen /= 4;
