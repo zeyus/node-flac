@@ -9,10 +9,10 @@
 #include <cstddef>
 #include <math.h>
 
+#define FLAC__NO_DLL
+
 #include <FLAC++/decoder.h>
 #include <FLAC++/encoder.h>
-
-#define FLAC__NO_DLL
 
 namespace nodeflac {
 	using namespace ::v8;
